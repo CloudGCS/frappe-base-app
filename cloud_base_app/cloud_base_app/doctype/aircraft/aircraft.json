@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "creation": "2023-12-22 02:35:28.813518",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "image",
+  "type",
+  "manufacturer",
+  "tail_no",
+  "column_break_idnz",
+  "is_simulator_aircraft",
+  "status",
+  "notes",
+  "certificate",
+  "plugin_tab",
+  "ps_plugins",
+  "column_break_fowz",
+  "mc_plugins"
+ ],
+ "fields": [
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Aircraft Type",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "type.manufacturer",
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "label": "Manufacturer",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "tail_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tail No",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_idnz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_simulator_aircraft",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Is Simulator Aircraft",
+   "set_only_once": 1
+  },
+  {
+   "default": "Ready",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Ready\nPending Release\nPending MRO\nRetired"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "plugin_tab",
+   "fieldtype": "Tab Break",
+   "label": "Plugin"
+  },
+  {
+   "fieldname": "ps_plugins",
+   "fieldtype": "Table MultiSelect",
+   "label": "PS Plugins",
+   "options": "Aircraft Plugin"
+  },
+  {
+   "fieldname": "column_break_fowz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mc_plugins",
+   "fieldtype": "Table MultiSelect",
+   "label": "MC Plugins",
+   "options": "Aircraft Plugin"
+  },
+  {
+   "fieldname": "certificate",
+   "fieldtype": "Attach",
+   "label": "Certificate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-17 03:33:42.457712",
+ "modified_by": "Administrator",
+ "module": "Cloud Base App",
+ "name": "Aircraft",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Plugin Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "tail_no"
+}

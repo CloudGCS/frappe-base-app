@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "creation": "2024-01-16 21:54:32.915820",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "request_section",
+  "module",
+  "service",
+  "host_url",
+  "method",
+  "endpoint",
+  "request_payload",
+  "response_section",
+  "response_status",
+  "response_payload"
+ ],
+ "fields": [
+  {
+   "fieldname": "request_section",
+   "fieldtype": "Section Break",
+   "label": "Request"
+  },
+  {
+   "fieldname": "host_url",
+   "fieldtype": "Data",
+   "label": "Host URL",
+   "reqd": 1
+  },
+  {
+   "default": "get",
+   "fieldname": "method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Method",
+   "options": "get\nput\npost\ndelete\npatch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "endpoint",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Endpoint"
+  },
+  {
+   "fieldname": "request_payload",
+   "fieldtype": "JSON",
+   "label": "Request Payload"
+  },
+  {
+   "fieldname": "response_section",
+   "fieldtype": "Section Break",
+   "label": "Response"
+  },
+  {
+   "fieldname": "response_payload",
+   "fieldtype": "Text",
+   "label": "Response Payload"
+  },
+  {
+   "fieldname": "module",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Module",
+   "options": "Module Def",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Service",
+   "reqd": 1
+  },
+  {
+   "fieldname": "response_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Response Status"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-17 01:34:40.852333",
+ "modified_by": "Administrator",
+ "module": "Cloud Base App",
+ "name": "Service API Call",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

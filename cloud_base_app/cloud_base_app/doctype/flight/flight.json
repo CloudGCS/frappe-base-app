@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "autoname": "format:{aircraft}-{YY}{MM}-{####}",
+ "creation": "2023-12-29 01:42:05.247348",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "aircraft",
+  "pilots",
+  "takeoff_time",
+  "landing_time",
+  "flight_duration",
+  "is_simulator_flight",
+  "flight_hours",
+  "location"
+ ],
+ "fields": [
+  {
+   "fieldname": "aircraft",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Aircraft",
+   "options": "Aircraft",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pilots",
+   "fieldtype": "Table MultiSelect",
+   "label": "Pilots",
+   "options": "Flight Pilot",
+   "reqd": 1
+  },
+  {
+   "fieldname": "takeoff_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Take-off Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "landing_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Landing Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "flight_duration",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "is_virtual": 1,
+   "label": "Flight Duration",
+   "options": "doc.flight_hours*3600",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_simulator_flight",
+   "fieldtype": "Check",
+   "label": "Is Simulator Flight"
+  },
+  {
+   "fieldname": "flight_hours",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Flight Hours",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Geolocation",
+   "label": "Location"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-17 01:02:16.217051",
+ "modified_by": "Administrator",
+ "module": "Cloud Base App",
+ "name": "Flight",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
