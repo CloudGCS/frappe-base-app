@@ -6,6 +6,12 @@ app_email = "contact@cloudgcs.com"
 app_license = "mit"
 # required_apps = []
 
+
+# fixtures = [
+#   "Box Settings", "Tenant Settings"
+# ]
+
+
 # Includes in <head>
 # ------------------
 
@@ -68,7 +74,7 @@ app_license = "mit"
 # ------------
 
 # before_install = "cloud_base_app.install.before_install"
-# after_install = "cloud_base_app.install.after_install"
+after_install = "cloud_base_app.setup.after_install"
 
 # Uninstallation
 # ------------
