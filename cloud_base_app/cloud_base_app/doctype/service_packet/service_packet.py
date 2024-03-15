@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class ServiceOfferingVersion(Document):
+class ServicePacket(Document):
 	pass

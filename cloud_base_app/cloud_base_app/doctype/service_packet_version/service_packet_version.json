@@ -1,52 +1,63 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{service_provider}-{code_name}",
- "creation": "2023-12-26 00:13:25.695654",
+ "autoname": "format:{service_packet}-v{major}.{minor}",
+ "creation": "2023-12-26 00:18:39.675086",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "title",
-  "code_name",
-  "service_provider"
+  "service_packet",
+  "major",
+  "minor",
+  "service_provider",
+  "extensions"
  ],
  "fields": [
   {
-   "fieldname": "title",
+   "fieldname": "major",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Title",
+   "label": "Major",
    "reqd": 1
   },
   {
-   "fieldname": "code_name",
+   "fieldname": "minor",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Code Name",
+   "label": "Minor",
    "reqd": 1
   },
   {
+   "fetch_from": "service_packet.service_provider",
    "fieldname": "service_provider",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Service Provider",
    "options": "Service Provider",
+   "reqd": 1
+  },
+  {
+   "fieldname": "extensions",
+   "fieldtype": "Table MultiSelect",
+   "label": "Extensions",
+   "options": "Service Packet Extension"
+  },
+  {
+   "fieldname": "service_packet",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Packet",
+   "options": "Service Packet",
    "reqd": 1,
    "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [
-  {
-   "group": "Details",
-   "link_doctype": "Service Offering Version",
-   "link_fieldname": "service_offering"
-  }
- ],
- "modified": "2024-01-17 01:33:15.085854",
+ "links": [],
+ "modified": "2024-03-14 16:52:28.856558",
  "modified_by": "Administrator",
  "module": "Cloud Base App",
- "name": "Service Offering",
+ "name": "Service Packet Version",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

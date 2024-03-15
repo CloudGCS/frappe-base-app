@@ -1,62 +1,78 @@
 {
  "actions": [],
- "allow_rename": 1,
- "autoname": "format:{service_provider}-{extension_type}-{library_name}",
- "creation": "2023-12-25 23:29:31.298159",
+ "allow_import": 1,
+ "autoname": "format:{service_provider}-{extension_type}-{library_name}-v{major}.{minor}",
+ "creation": "2023-12-25 23:41:04.174091",
  "doctype": "DocType",
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "title",
-  "extension_type",
   "library_name",
   "service_provider",
-  "versions"
+  "extension_type",
+  "major",
+  "minor",
+  "file"
  ],
  "fields": [
   {
    "fieldname": "title",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Title",
    "reqd": 1
   },
   {
-   "fieldname": "extension_type",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Extension Type",
-   "options": "Service Extension Type",
-   "reqd": 1,
-   "set_only_once": 1
-  },
-  {
    "fieldname": "library_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Library Name",
-   "reqd": 1,
-   "set_only_once": 1
+   "reqd": 1
   },
   {
    "fieldname": "service_provider",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Service Provider",
-   "options": "Service Provider",
-   "reqd": 1,
-   "search_index": 1
+   "reqd": 1
   },
   {
-   "fieldname": "versions",
-   "fieldtype": "Table",
-   "label": "Versions",
-   "options": "Service Extension Version",
+   "fetch_from": "extension.extension_type",
+   "fieldname": "extension_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Extension Type",
+   "options": "Service Extension Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "major",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Major",
+   "reqd": 1
+  },
+  {
+   "fieldname": "minor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Minor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "file",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "File",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-17 01:35:13.464796",
+ "modified": "2024-03-14 22:36:00.703819",
  "modified_by": "Administrator",
  "module": "Cloud Base App",
  "name": "Service Extension",
@@ -68,41 +84,16 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "select": 1,
-   "share": 1,
-   "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "All",
-   "select": 1,
-   "share": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Tenant Manager",
-   "select": 1,
    "share": 1,
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "title"
+ "states": []
 }
