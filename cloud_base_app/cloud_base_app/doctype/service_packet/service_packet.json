@@ -39,11 +39,11 @@
  "links": [
   {
    "group": "Details",
-   "link_doctype": "Service Offering Version",
-   "link_fieldname": "service_offering"
+   "link_doctype": "Service Packet Version",
+   "link_fieldname": "service_packet"
   }
  ],
- "modified": "2024-03-08 12:16:13.765103",
+ "modified": "2024-03-15 01:03:20.571112",
  "modified_by": "Administrator",
  "module": "Cloud Base App",
  "name": "Service Packet",
