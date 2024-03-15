@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-14 15:15:58.055080",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "id",
+  "aircraft_id",
+  "aircraft_name",
+  "user_code",
+  "full_name",
+  "username",
+  "tenant_code",
+  "tenant_name",
+  "version",
+  "flight_id",
+  "source",
+  "timestamp",
+  "message",
+  "details",
+  "environment",
+  "flightloglevel",
+  "data",
+  "is_simulator"
+ ],
+ "fields": [
+  {
+   "fieldname": "id",
+   "fieldtype": "Int",
+   "label": "Id",
+   "unique": 1
+  },
+  {
+   "fieldname": "aircraft_id",
+   "fieldtype": "Int",
+   "label": "Aircraft Id"
+  },
+  {
+   "fieldname": "aircraft_name",
+   "fieldtype": "Link",
+   "label": "Aircraft Name",
+   "options": "Aircraft"
+  },
+  {
+   "fieldname": "user_code",
+   "fieldtype": "Data",
+   "label": "UserCode"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "tenant_code",
+   "fieldtype": "Data",
+   "label": "Tenant Code"
+  },
+  {
+   "fieldname": "tenant_name",
+   "fieldtype": "Data",
+   "label": "Tenant Name"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "flight_id",
+   "fieldtype": "Data",
+   "label": "Flight Id",
+   "unique": 1
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Data",
+   "label": "Source"
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Float",
+   "label": "Timestamp"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Data",
+   "label": "Message"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Data",
+   "label": "Details"
+  },
+  {
+   "fieldname": "environment",
+   "fieldtype": "Data",
+   "label": "Environment"
+  },
+  {
+   "fieldname": "flightloglevel",
+   "fieldtype": "Data",
+   "label": "Level"
+  },
+  {
+   "fieldname": "data",
+   "fieldtype": "Data",
+   "label": "Data"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_simulator",
+   "fieldtype": "Check",
+   "label": "Is Simulator"
+  },
+  {
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "label": "Username"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-15 10:31:46.109376",
+ "modified_by": "Administrator",
+ "module": "Cloud Base App",
+ "name": "Flight Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
