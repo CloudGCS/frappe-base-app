@@ -1,7 +1,7 @@
 // Copyright (c) 2024, CloudGCS and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Service Offering", {
+// frappe.ui.form.on("Service Packet Version", {
 // 	refresh(frm) {
 
 // 	},

@@ -1,7 +1,7 @@
 // Copyright (c) 2024, CloudGCS and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Service Offering Version", {
+// frappe.ui.form.on("Tenant Settings", {
 // 	refresh(frm) {
 
 // 	},

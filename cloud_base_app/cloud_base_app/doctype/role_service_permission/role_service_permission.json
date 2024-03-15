@@ -8,7 +8,7 @@
   "column_break_xcgk",
   "role",
   "service_permission",
-  "service"
+  "service_packet"
  ],
  "fields": [
   {
@@ -34,18 +34,18 @@
    "search_index": 1
   },
   {
-   "fieldname": "service",
+   "fieldname": "service_packet",
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Service",
-   "options": "Service Offering",
+   "label": "Service Packet",
+   "options": "Service Packet",
    "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-17 01:34:51.878055",
+ "modified": "2024-03-14 17:46:53.868347",
  "modified_by": "Administrator",
  "module": "Cloud Base App",
  "name": "Role Service Permission",
