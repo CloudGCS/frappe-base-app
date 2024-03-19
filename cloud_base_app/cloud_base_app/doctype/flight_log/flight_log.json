@@ -1,0 +1,183 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-18 18:13:35.736364",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "id",
+  "aircraft_id",
+  "aircraft_name",
+  "user_code",
+  "full_name",
+  "username",
+  "tenant_code",
+  "tenant_name",
+  "version",
+  "flight_id",
+  "source",
+  "timestamp",
+  "message",
+  "details",
+  "environment",
+  "level",
+  "data",
+  "is_simulator"
+ ],
+ "fields": [
+  {
+   "fieldname": "id",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Id",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "aircraft_id",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Aircraft Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "aircraft_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Aircraft Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "user_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "User Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Username",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tenant_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tenant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "flight_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Flight Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Source",
+   "read_only": 1
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Timestamp",
+   "read_only": 1
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "environment",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Environment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "data",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Data",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_simulator",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Simulator",
+   "read_only": 1
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Level",
+   "read_only": 1
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-19 17:16:43.882386",
+ "modified_by": "Administrator",
+ "module": "Cloud Base App",
+ "name": "Flight Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_views": 1
+}
