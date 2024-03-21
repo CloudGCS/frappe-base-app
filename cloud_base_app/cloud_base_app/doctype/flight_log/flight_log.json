@@ -1,44 +1,37 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{#####}",
  "creation": "2024-03-18 18:13:35.736364",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "id",
-  "aircraft_id",
+  "flight_id",
+  "level",
+  "timestamp",
+  "is_simulator",
   "aircraft_name",
-  "user_code",
   "full_name",
+  "message",
+  "details",
+  "id",
+  "user_code",
   "username",
   "tenant_code",
   "tenant_name",
   "version",
-  "flight_id",
   "source",
-  "timestamp",
-  "message",
-  "details",
   "environment",
-  "level",
-  "data",
-  "is_simulator"
+  "data"
  ],
  "fields": [
   {
    "fieldname": "id",
    "fieldtype": "Int",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Id",
    "read_only": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "aircraft_id",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Aircraft Id",
-   "read_only": 1
   },
   {
    "fieldname": "aircraft_name",
@@ -50,7 +43,7 @@
   {
    "fieldname": "user_code",
    "fieldtype": "Data",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "User Code",
    "read_only": 1
   },
@@ -58,34 +51,34 @@
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Full Name",
+   "label": "Pilot",
    "read_only": 1
   },
   {
    "fieldname": "username",
    "fieldtype": "Data",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Username",
    "read_only": 1
   },
   {
    "fieldname": "tenant_code",
    "fieldtype": "Data",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Tenant Code",
    "read_only": 1
   },
   {
    "fieldname": "tenant_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Tenant Name",
    "read_only": 1
   },
   {
    "fieldname": "version",
    "fieldtype": "Data",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Version",
    "read_only": 1
   },
@@ -99,15 +92,15 @@
   {
    "fieldname": "source",
    "fieldtype": "Data",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Source",
    "read_only": 1
   },
   {
    "fieldname": "timestamp",
-   "fieldtype": "Float",
+   "fieldtype": "Datetime",
    "in_list_view": 1,
-   "label": "Timestamp",
+   "label": "Date",
    "read_only": 1
   },
   {
@@ -127,14 +120,14 @@
   {
    "fieldname": "environment",
    "fieldtype": "Data",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Environment",
    "read_only": 1
   },
   {
    "fieldname": "data",
    "fieldtype": "Data",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Data",
    "read_only": 1
   },
@@ -143,24 +136,25 @@
    "fieldname": "is_simulator",
    "fieldtype": "Check",
    "in_list_view": 1,
-   "label": "Is Simulator",
+   "label": "Is Simulator Entry",
    "read_only": 1
   },
   {
    "fieldname": "level",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Level",
+   "label": "Issue Type",
    "read_only": 1
   }
  ],
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-19 17:16:43.882386",
+ "modified": "2024-03-20 15:54:17.122329",
  "modified_by": "Administrator",
  "module": "Cloud Base App",
  "name": "Flight Log",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
