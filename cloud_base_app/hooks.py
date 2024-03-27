@@ -7,9 +7,10 @@ app_license = "mit"
 # required_apps = []
 
 
-# fixtures = [
-#   "Box Settings", "Tenant Settings"
-# ]
+fixtures = [
+  {"dt": "Role Profile", "filters": [["name", "in", ["Pilotage"]]]},
+  {"dt": "Role", "filters": [["name", "in", ["Pilot Role"]]]}
+]
 
 
 # Includes in <head>

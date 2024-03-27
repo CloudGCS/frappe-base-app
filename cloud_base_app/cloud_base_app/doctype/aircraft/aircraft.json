@@ -1,11 +1,5 @@
 {
- "actions": [
-  {
-   "action": "cloud_base_app.cloud_base_app.services.certificate_service.create_aircraft_certificate",
-   "action_type": "Server Action",
-   "label": "Create Certificate"
-  }
- ],
+ "actions": [],
  "creation": "2023-12-22 02:35:28.813518",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -112,7 +106,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-22 22:23:52.681847",
+ "modified": "2024-03-27 14:33:47.415745",
  "modified_by": "Administrator",
  "module": "Cloud Base App",
  "name": "Aircraft",
@@ -141,6 +135,15 @@
    "role": "Plugin Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Pilot Role",
+   "share": 1
   }
  ],
  "show_title_field_in_link": 1,

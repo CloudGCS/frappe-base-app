@@ -1,0 +1,17 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2024-03-27 02:59:08.954677",
+  "name": "Pilotage",
+  "role_profile": "Pilotage",
+  "roles": [
+   {
+    "parent": "Pilotage",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Pilot Role"
+   }
+  ]
+ }
+]

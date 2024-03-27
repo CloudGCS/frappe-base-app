@@ -63,7 +63,7 @@
    "link_fieldname": "type"
   }
  ],
- "modified": "2024-01-17 01:02:32.661362",
+ "modified": "2024-03-27 03:48:27.222352",
  "modified_by": "Administrator",
  "module": "Cloud Base App",
  "name": "Aircraft Type",
@@ -93,6 +93,16 @@
    "role": "Tenant Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Pilot Role",
+   "select": 1,
+   "share": 1
   }
  ],
  "show_title_field_in_link": 1,

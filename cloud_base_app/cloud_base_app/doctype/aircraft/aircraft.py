@@ -1,9 +1,11 @@
 # Copyright (c) 2024, CloudGCS and contributors
 # For license information, please see license.txt
 
+import json
 import frappe
 from frappe.model.document import Document
 
+from cloud_base_app.cloud_base_app.services.certificate_service import create_aircraft_certificate
 
 class Aircraft(Document):
     def autoname(self):
@@ -17,6 +19,11 @@ class Aircraft(Document):
         else:
             # Handle cases where the tenant code or tail no is not available
             frappe.throw('Tenant Code or Tail No is missing!')
+
+    def after_insert(self):
+        # Call the create_aircraft_certificate function after a new Aircraft is inserted
+        doc = json.dumps(self.as_dict())
+        create_aircraft_certificate(doc=doc)
 
     # def before_insert(self):
     #   doc = frappe.get_doc("Box Settings")
